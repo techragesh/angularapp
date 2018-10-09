@@ -1,7 +1,14 @@
 .fill-remaining-space {
     flex: 1 1 auto;
   }
+.toolbar-fullscreen {
+    display: none;
+}
 
-  mat-sidenav {
-    width: 200px;
-  }
+.toolbar-filler {
+    flex: 1 1 auto
+}
+mat-sidenav {
+  width: 300px;
+  background-color: rgb(206, 216, 247);
+}
