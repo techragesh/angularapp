@@ -6,6 +6,7 @@ import { LoginComponent } from './components/login/login.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { LoginLayoutComponent } from './layout/login-layout/login-layout.component';
 import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
+import { CompanyListComponent } from './components/company-list/company-list.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', data: { title: 'Login' }, pathMatch: 'full' },
@@ -18,7 +19,8 @@ const routes: Routes = [
   { path: 'main', component: HomeLayoutComponent,
     children: [
       { path: 'overview', component: OverviewComponent },
-      { path: 'company', component: CompanyComponent }
+      { path: 'company', component: CompanyComponent },
+      { path: 'companylist', component: CompanyListComponent }
     ]
   }
 ];

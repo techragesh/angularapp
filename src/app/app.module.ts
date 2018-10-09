@@ -15,6 +15,8 @@ import { LoginLayoutComponent } from './layout/login-layout/login-layout.compone
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
+import { CompanyListComponent } from './components/company-list/company-list.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,8 @@ import { NgtUniversalModule } from '@ng-toolkit/universal';
     LoginComponent,
     LoginLayoutComponent,
     ToolbarComponent,
-    HomeLayoutComponent
+    HomeLayoutComponent,
+    CompanyListComponent
   ],
   imports: [
     NgtUniversalModule,
