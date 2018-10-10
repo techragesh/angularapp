@@ -3,10 +3,30 @@
 @import "~font-awesome/css/font-awesome.css"; */
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
-.toolbar {
-  background-color: #dde0e0;
-  border-radius: 5px;
-  color: white;
+/*
+ * Actual Sticky Footer Styles
+ */
+.all-wrap {
+  min-height: 80vh;
+}
+
+.all-cwrap {
+  min-height: 93vh;
+}
+
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}
+
+footer {
+  background: #143ba8;
+  padding: 15px;
 }
 
 .toolbar-spacer {
@@ -15,4 +35,25 @@
 
 .demo-toolbar {
   flex: 1 1 auto;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.example-card {
+  max-width: 1000px;
+  margin: 4px;
+}
+
+.app-progress-bar {
+  width: 100px !important;
+  height: 30px !important;
+}
+
+h4 {
+  display: inline;
+  background-color: rgb(103, 226, 103);
+  color: #fff;
 }

@@ -1,3 +1,4 @@
+import { DocumentlistComponent } from './components/documentlist/documentlist.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { OverviewComponent } from './components/overview/overview.component';
@@ -9,18 +10,26 @@ import { HomeLayoutComponent } from './layout/home-layout/home-layout.component'
 import { CompanyListComponent } from './components/company-list/company-list.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'login', data: { title: 'Login' }, pathMatch: 'full' },
   {
-    path: 'login', component: LoginLayoutComponent, data: {title: 'Login'},
-    children: [
-      {path: '', component: LoginComponent}
-    ]
+    path: '',
+    redirectTo: 'login',
+    data: { title: 'Login' },
+    pathMatch: 'full'
   },
-  { path: 'main', component: HomeLayoutComponent,
+  {
+    path: 'login',
+    component: LoginLayoutComponent,
+    data: { title: 'Login' },
+    children: [{ path: '', component: LoginComponent }]
+  },
+  {
+    path: 'main',
+    component: HomeLayoutComponent,
     children: [
       { path: 'overview', component: OverviewComponent },
       { path: 'company', component: CompanyComponent },
-      { path: 'companylist', component: CompanyListComponent }
+      { path: 'companylist', component: CompanyListComponent },
+      { path: 'documentlist', component: DocumentlistComponent }
     ]
   }
 ];
@@ -29,4 +38,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -1,130 +1,238 @@
-<mat-card>
-    <mat-card-header>
-        <mat-toolbar class="toolbar">
-        <mat-card-title><b style="color: black; font-family: 'Courier New', Courier, monospace; font-size: 18pt">Company List</b></mat-card-title>
-        <span class="toolbar-spacer"></span>
-        <mat-card-actions align="end">
-        <mat-icon (click)=addAddress() style="color: black">add</mat-icon>
-      </mat-card-actions>
-        </mat-toolbar>
-    </mat-card-header>
-    <br/>
-    <mat-card-content>
+<br />
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title><b style="color: black; font-family: 'Courier New', Courier, monospace; font-size: 18pt">ABONNEMENTEN</b></mat-card-title>
+  </mat-card-header>
+  <br />
+  <mat-card-content>
+    The yearly pension statement is standardized (Uniform Pension Overview) in order to sum up the different
+    pension statements in the pension portal mijnpensioenoverzicht.nl, a pension tracking system that provides
+    participants with an online overview of their accrued pension rights.
+    The yearly pension statement is standardized (Uniform Pension Overview) in order to sum up the different
+    pension statements in the pension portal mijnpensioenoverzicht.nl, a pension tracking system that provides
+    participants with an online overview of their accrued pension rights.
+    The yearly pension statement is standardized (Uniform Pension Overview) in order to sum up the different
+    pension statements in the pension portal mijnpensioenoverzicht.nl, a pension tracking system that provides
+    participants with an online overview of their accrued pension rights.
+    The yearly pension statement is standardized (Uniform Pension Overview) in order to sum up the different
+    pension statements in the pension portal mijnpensioenoverzicht.nl, a pension tracking system that provides
+    participants with an online overview of their accrued pension rights.
+  </mat-card-content>
+</mat-card>
+<br />
+<br />
+<mat-card class="example-card">
+  <mat-accordion class="example-headers-align">
+    <mat-expansion-panel [expanded]="true" class="mat-elevation-z0">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <img src="assets/ing.png" class="company_logo">
+        </mat-panel-title>
+        <mat-panel-description>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <br />
       <mat-accordion>
-        <mat-expansion-panel>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              <img src="assets/ing.png" width="200px" height="50px">
+              <mat-icon>ballot</mat-icon>&nbsp;&nbsp;
+              <b>Savings Account</b>
             </mat-panel-title>
             <mat-panel-description><b></b>
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <br />
-          <mat-accordion>
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                <b>Savings Account</b>
-                </mat-panel-title>
-                <mat-panel-description><b>This is my savings account</b>
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>This is my savings account</p>
-            </mat-expansion-panel>
-            <br />
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                <b>Mortgage Account</b>
-                </mat-panel-title>
-                <mat-panel-description><b>This is my Mortgage account</b>
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>This is my Mortgage account</p>
-            </mat-expansion-panel>
-            <br />
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                <b>Credit Card Account</b>
-                </mat-panel-title>
-                <mat-panel-description><b>This is my credit card account</b>
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>This is my credit card account</p>
-            </mat-expansion-panel>
-          </mat-accordion>
+
+          <table class="table" width="100%">
+            <tr>
+              <td>512345678</td>
+              <td>R SHUNMUGAM</td>
+              <td>Savings</td>
+              <td>
+                <mat-icon (click)="editAddress(account.id)">create</mat-icon>
+              </td>
+              <td>
+                <mat-icon (click)="deleteAddress(account.id)">clear</mat-icon>
+              </td>
+            </tr>
+          </table>
         </mat-expansion-panel>
         <br />
         <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              <img src="assets/T-Mobile_logo.png" width="200px" height="50px">
+              <mat-icon>ballot</mat-icon>&nbsp;&nbsp;
+              <b>Mortgage Account</b>
             </mat-panel-title>
-            <mat-panel-description>
-              <b></b>
+            <mat-panel-description><b></b>
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <br />
-          <mat-accordion>
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                <b> Prepaid</b>
-                </mat-panel-title>
-                <mat-panel-description><b>This is my prepaid connection</b>
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>This is my prepaid connection</p>
-            </mat-expansion-panel>
-            <br />
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                <b> Internet/TV </b>
-                </mat-panel-title>
-                <mat-panel-description><b>This is my Internet/TV account</b>
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>This is my Internet/TV account</p>
-            </mat-expansion-panel>
-          </mat-accordion>
+          <table class="table" width="100%">
+            <tr>
+              <td>123456</td>
+              <td>R SHUNMUGAM</td>
+              <td>Mortgage</td>
+              <td>
+                <mat-icon (click)="editAddress(account.id)">create</mat-icon>
+              </td>
+              <td>
+                <mat-icon (click)="deleteAddress(account.id)">clear</mat-icon>
+              </td>
+            </tr>
+          </table>
         </mat-expansion-panel>
         <br />
         <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
           <mat-expansion-panel-header>
             <mat-panel-title>
-              <img src="assets/AEGON.png" width="200px" height="50px">
+              <mat-icon>ballot</mat-icon>&nbsp;&nbsp;
+              <b>Credit Card Account</b>
             </mat-panel-title>
-            <mat-panel-description>
-              <b></b>
+            <mat-panel-description><b></b>
             </mat-panel-description>
           </mat-expansion-panel-header>
-          <br />
-          <mat-accordion>
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  <b>Life Insurance</b>
-                </mat-panel-title>
-                <mat-panel-description><b>This is my life insurance</b>
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>This is my life insurance</p>
-            </mat-expansion-panel>
-            <br />
-            <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
-              <mat-expansion-panel-header>
-                <mat-panel-title>
-                  <b>Pension</b>
-                </mat-panel-title>
-                <mat-panel-description><b>This is my Pension</b>
-                </mat-panel-description>
-              </mat-expansion-panel-header>
-              <p>This is my Pension</p>
-            </mat-expansion-panel>
-          </mat-accordion>
+          <table class="table" width="100%">
+            <tr>
+              <td>0987654</td>
+              <td>R SHUNMUGAM</td>
+              <td>Credit Card</td>
+              <td>
+                <mat-icon (click)="editAddress(account.id)">create</mat-icon>
+              </td>
+              <td>
+                <mat-icon (click)="deleteAddress(account.id)">clear</mat-icon>
+              </td>
+            </tr>
+          </table>
         </mat-expansion-panel>
       </mat-accordion>
-    </mat-card-content>
-  </mat-card>
+      <br />
+      <span class="toolbar-spacer"></span>
+      <mat-icon (click)=addAddress() style="color: black">add_circle</mat-icon>
+    </mat-expansion-panel>
+    <br />
+    <br />
+    <mat-expansion-panel class="mat-elevation-z0" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <img src="assets/t-mobile.png" class="company_logo">
+        </mat-panel-title>
+        <mat-panel-description>
+          <b></b>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <br />
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b> Prepaid</b>
+            </mat-panel-title>
+            <mat-panel-description><b>This is my prepaid connection</b>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>This is my prepaid connection</p>
+        </mat-expansion-panel>
+        <br />
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b> Internet/TV </b>
+            </mat-panel-title>
+            <mat-panel-description><b>This is my Internet/TV account</b>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>This is my Internet/TV account</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-expansion-panel>
+    <br /><br />
+    <mat-expansion-panel class="mat-elevation-z0" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <img src="assets/aegon.png" class="company_logo">
+        </mat-panel-title>
+        <mat-panel-description>
+          <b></b>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <br />
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b>Life Insurance</b>
+            </mat-panel-title>
+            <mat-panel-description><b>This is my life insurance</b>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>This is my life insurance</p>
+        </mat-expansion-panel>
+        <br />
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b>Pension</b>
+            </mat-panel-title>
+            <mat-panel-description><b>This is my Pension</b>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>This is my Pension</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-expansion-panel>
+    <br /><br />
+    <mat-expansion-panel class="mat-elevation-z0" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <img src="assets/energiedirect-nl.png" class="company_logo">
+        </mat-panel-title>
+        <mat-panel-description>
+          <b></b>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <br />
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b>Electricity & Gas</b>
+            </mat-panel-title>
+            <mat-panel-description><b></b>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>This is my Electricity and Gas</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-expansion-panel>
+    <br /><br />
+    <mat-expansion-panel class="mat-elevation-z0" (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <img src="assets/dunea.jpg" class="company_logo">
+        </mat-panel-title>
+        <mat-panel-description>
+          <b></b>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <br />
+      <mat-accordion>
+        <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              <b>Water</b>
+            </mat-panel-title>
+            <mat-panel-description><b></b>
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <p>This is my Water connection</p>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <span class="toolbar-spacer"></span>
+  <mat-card-actions align="end">
+    <mat-icon (click)=addAddress() style="color: black">add_circle</mat-icon>
+  </mat-card-actions>
+</mat-card>
+<br />

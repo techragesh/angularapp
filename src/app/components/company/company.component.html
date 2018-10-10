@@ -1,76 +1,82 @@
-
-  
-    <mat-toolbar class="accent">
-      <mat-card-title>Company Information</mat-card-title>
-      <span class="demo-toolbar"></span>
-      <mat-icon (click)="onCancel()">cancel</mat-icon>
-    </mat-toolbar>
-  <br />
-  <mat-card>
+<mat-toolbar class="primary">
+  <mat-card-title>ABONNEMENTEN Information</mat-card-title>
+  <span class="demo-toolbar"></span>
+  <mat-icon (click)="onCancel()">cancel</mat-icon>
+</mat-toolbar>
+<br />
+<mat-card>
   <mat-card-content>
-        <form [formGroup]="companyForm" (submit)="onSubmit()">  
-        <table>
-          <tr><td colspan="2">
-                <mat-form-field class="demo-full-width">
-                  <input matInput placeholder="Company Name" formControlName="companyName">
-               </mat-form-field>
-               <mat-error>  
-                  <span *ngIf="!companyForm.get('companyName').valid && companyForm.get('companyName').touched">Please enter Company Name !!!</span>  
-              </mat-error> 
-            </td>
-            </tr>
-            <tr><td>
-                <mat-form-field class="demo-full-width">
-                  <input matInput placeholder="Company ID" formControlName= "companyId">
-                </mat-form-field>
-                <mat-error>  
-                    <span *ngIf="!companyForm.get('companyId').valid && companyForm.get('companyId').touched">Please enter Company ID !!!</span>  
-                </mat-error> 
-              </td>
-              <td>
-                <mat-form-field class="demo-full-width">
-                  <input matInput placeholder="BSN" formControlName="bsn">
-                </mat-form-field>
-                <mat-error>  
-                    <span *ngIf="!companyForm.get('bsn').valid && companyForm.get('bsn').touched">Please enter BSN !!!</span>  
-                </mat-error>
-              </td></tr>
-              <tr><td>
-                <mat-form-field class="demo-full-width">
-                  <mat-select placeholder="Select Subscription" formControlName="subscription">
-                    <mat-option value="option">Option</mat-option>
-                    <mat-option value="option">Insurance</mat-option>
-                    <mat-option value="option">Health</mat-option>
-                    <mat-option value="option">Telecom</mat-option>
-                  </mat-select>
-                  <mat-error>  
-                      <span *ngIf="!companyForm.get('subscription').valid && companyForm.get('subscription').touched">Please select any item !!!</span>  
-                  </mat-error> 
-                </mat-form-field> 
-                </td>
-                  <td>
-                
-             
-                <mat-form-field class="demo-full-width">
-                  <input matInput placeholder="Subscription ID" formControlName="subscriptionId">
-                </mat-form-field>
-                <mat-error>  
-                    <span *ngIf="!companyForm.get('subscriptionId').valid && companyForm.get('subscriptionId').touched">Please enter subscriptionId !!!</span>  
-                </mat-error>
-              </td>
-              </tr>
-              <tr>  
-                  <td colspan="2" class="content-center">  
-                      <button type="submit" class="btn btn-success">
-                          <mat-icon>save</mat-icon>
-                      </button>  
-                  </td>  
-              </tr>  
-              <tr>  
-                  <td></td>  
-              </tr>  
-              </table>  
-        </form>
-   
+    <form [formGroup]="companyForm" (submit)="onSubmit()">
+      <table>
+        <tr>
+          <td colspan="2">
+            <mat-form-field class="demo-full-width">
+              <input matInput placeholder="Company Name" formControlName="companyName">
+            </mat-form-field>
+            <mat-error>
+              <span *ngIf="!companyForm.get('companyName').valid && companyForm.get('companyName').touched">Please
+                enter Company Name !!!</span>
+            </mat-error>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="demo-full-width">
+              <input matInput placeholder="Company ID" formControlName="companyId">
+            </mat-form-field>
+            <mat-error>
+              <span *ngIf="!companyForm.get('companyId').valid && companyForm.get('companyId').touched">Please enter
+                Company ID !!!</span>
+            </mat-error>
+          </td>
+          <td>
+            <mat-form-field class="demo-full-width">
+              <input matInput placeholder="BSN" formControlName="bsn">
+            </mat-form-field>
+            <mat-error>
+              <span *ngIf="!companyForm.get('bsn').valid && companyForm.get('bsn').touched">Please enter BSN !!!</span>
+            </mat-error>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="demo-full-width">
+              <mat-select placeholder="Select Subscription" formControlName="subscription">
+                <mat-option value="option">Option</mat-option>
+                <mat-option value="option">Insurance</mat-option>
+                <mat-option value="option">Health</mat-option>
+                <mat-option value="option">Telecom</mat-option>
+              </mat-select>
+              <mat-error>
+                <span *ngIf="!companyForm.get('subscription').valid && companyForm.get('subscription').touched">Please
+                  select any item !!!</span>
+              </mat-error>
+            </mat-form-field>
+          </td>
+          <td>
+
+
+            <mat-form-field class="demo-full-width">
+              <input matInput placeholder="Subscription ID" formControlName="subscriptionId">
+            </mat-form-field>
+            <mat-error>
+              <span *ngIf="!companyForm.get('subscriptionId').valid && companyForm.get('subscriptionId').touched">Please
+                enter subscriptionId !!!</span>
+            </mat-error>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" class="content-center">
+            <button type="submit" class="btn btn-success">
+              <mat-icon>save</mat-icon>
+            </button>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+    </form>
+
   </mat-card-content>
 </mat-card>

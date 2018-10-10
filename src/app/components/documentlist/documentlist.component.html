@@ -1,7 +1,7 @@
 <br />
 <mat-card class="example-card">
   <mat-card-header>
-    <mat-card-title><b style="color: black; font-family: 'Courier New', Courier, monospace; font-size: 18pt">OVERZICHT</b></mat-card-title>
+    <mat-card-title><b style="color: black; font-family: 'Courier New', Courier, monospace; font-size: 18pt">DOCUMENTEN</b></mat-card-title>
   </mat-card-header>
   <br />
   <mat-card-content>
@@ -23,45 +23,65 @@
 <br />
 <mat-card class="example-card">
   <mat-card-header>
-    <mat-icon>call_to_action</mat-icon> <b>&nbsp;&nbsp;MACHTIGINGEN</b>
+    <mat-icon>branding_watermark</mat-icon> <b>&nbsp;&nbsp;OVERLIJDENSAKTE</b>
   </mat-card-header>
   <br />
   <mat-card-content>
     <mat-list>
       <mat-list-item class="mat-2-line">
-
-        <mat-icon>account_box</mat-icon><b>&nbsp;&nbsp;Rosalie van Weegen</b>
+        <mat-icon>branding_watermark</mat-icon><b>&nbsp;&nbsp;Machtig begrafenisondernemen</b>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Voortgang:&nbsp;&nbsp;&nbsp;
-        <mat-progress-bar mode="determinate" class="app-progress-bar" value="87"></mat-progress-bar>
-        &nbsp;&nbsp;&nbsp;87% &nbsp;&nbsp;&nbsp;<h4>&nbsp;In behandeling&nbsp;</h4>
-        <span class="toolbar-spacer"></span>
-        <mat-icon>more_vert</mat-icon>
-
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item>
-        <mat-icon>account_box</mat-icon><b>&nbsp;&nbsp;Karel Hoogeveld</b>
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Voortgang:&nbsp;&nbsp;&nbsp;
-        <mat-progress-bar mode="determinate" class="app-progress-bar" value="37"></mat-progress-bar>
-        &nbsp;&nbsp;&nbsp;37% &nbsp;&nbsp;&nbsp;Behandelen
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <h4>&nbsp;Gemachtigd&nbsp;</h4>
         <span class="toolbar-spacer"></span>
         <mat-icon>more_vert</mat-icon>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
-        <mat-icon>account_box</mat-icon><b>&nbsp;&nbsp;Richard Hoogeveld</b>
+        <mat-icon>branding_watermark</mat-icon><b>&nbsp;&nbsp;Upload</b>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        Voortgang:&nbsp;&nbsp;&nbsp;
-        <mat-progress-bar mode="determinate" class="app-progress-bar" value="10"></mat-progress-bar>
-        &nbsp;&nbsp;&nbsp;10% &nbsp;&nbsp;&nbsp;Behandelen
+        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;Akte van Overlijden RvW Signed &nbsp;&nbsp;&nbsp;
+        <h4>&nbsp;Vooltooid&nbsp;</h4>
         <span class="toolbar-spacer"></span>
         <mat-icon>more_vert</mat-icon>
       </mat-list-item>
     </mat-list>
   </mat-card-content>
+</mat-card>
+<br />
+<br />
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-icon>branding_watermark</mat-icon> <b>&nbsp;&nbsp;OVERIGE DOCUMENTATIE</b>
+  </mat-card-header>
+  <br />
+  <mat-card-content>
+    <mat-list>
+      <mat-list-item class="mat-2-line">
+        <mat-icon>branding_watermark</mat-icon>&nbsp;&nbsp;<a href="#"><b>H1234-AX51_bewijs_van_uitschrijving.pdf</b></a>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="toolbar-spacer"></span>
+        <mat-icon>more_vert</mat-icon>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <mat-icon>branding_watermark</mat-icon><b>&nbsp;&nbsp;<a href="#">T-Mobile 201801004</a></b>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+        <span class="toolbar-spacer"></span>
+        <mat-icon>more_vert</mat-icon>
+      </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+  <span class="toolbar-spacer"></span>
+  <mat-card-actions align="end">
+    <mat-icon (click)=addAddress() style="color: black">add_circle</mat-icon>
+  </mat-card-actions>
 </mat-card>

@@ -1,21 +1,40 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="white">
-      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-    </button>
-    <span><b>Management Portal</b></span>
-    <span class="fill-remaining-space"></span>
-    <button mat-button (click)="onLogout()">Logout</button>
-  </mat-toolbar-row>
-</mat-toolbar>
-<mat-sidenav-container class="example-container">
-  <mat-sidenav #drawer mode="side" opened role="navigation" class="app-sidenav">
-    <mat-nav-list>
-      <a mat-list-item routerLink='/main/overview'>Overview</a>
-      <a mat-list-item routerLink='/main/companylist'>Company</a>
-    </mat-nav-list>
-  </mat-sidenav>
-  <mat-sidenav-content>
-    <router-outlet></router-outlet>
-  </mat-sidenav-content>
-</mat-sidenav-container>
+<div class="all-cwrap" fullscreen>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="white">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span><b>GEREGELD BIJ LEVEN</b></span>
+      <span class="fill-remaining-space"></span>
+      <button mat-button (click)="onLogout()"><b>Logout</b></button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav #drawer mode="side" opened role="navigation" class="app-sidenav">
+      <mat-nav-list>
+        <a mat-list-item routerLink='/main/overview'>
+          <mat-icon>home</mat-icon> <b> &nbsp;&nbsp;OVERZICHT</b>
+        </a>
+        <br />
+        <a mat-list-item routerLink='/main/overview'>
+          <mat-icon>account_box</mat-icon> <b> &nbsp;&nbsp;PROFIEL</b>
+        </a>
+        <br />
+        <a mat-list-item routerLink='/main/companylist'>
+          <mat-icon>ballot</mat-icon> <b> &nbsp;&nbsp;ABONNEMENTEN</b>
+        </a>
+        <br />
+        <a mat-list-item routerLink='/main/companylist'>
+          <mat-icon>call_to_action</mat-icon> <b> &nbsp;&nbsp;MACHTIGINGEN</b>
+        </a>
+        <br />
+        <a mat-list-item routerLink='/main/documentlist'>
+          <mat-icon>account_balance_wallet</mat-icon> <b> &nbsp;&nbsp;DOCUMENTEN</b>
+        </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

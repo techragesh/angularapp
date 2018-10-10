@@ -16,6 +16,7 @@ import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HomeLayoutComponent } from './layout/home-layout/home-layout.component';
 import { NgtUniversalModule } from '@ng-toolkit/universal';
 import { CompanyListComponent } from './components/company-list/company-list.component';
+import { DocumentlistComponent } from './components/documentlist/documentlist.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CompanyListComponent } from './components/company-list/company-list.com
     LoginLayoutComponent,
     ToolbarComponent,
     HomeLayoutComponent,
-    CompanyListComponent
+    CompanyListComponent,
+    DocumentlistComponent
   ],
   imports: [
     NgtUniversalModule,

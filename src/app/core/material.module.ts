@@ -14,7 +14,8 @@ import {
   MatFormFieldModule,
   MatSelectModule,
   MatInputModule,
-  MatOptionModule
+  MatOptionModule,
+  MatProgressBarModule
 } from '@angular/material';
 
 @NgModule({
@@ -33,7 +34,8 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    MatProgressBarModule
   ],
   exports: [
     CommonModule,
@@ -50,7 +52,8 @@ import {
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-    MatOptionModule
+    MatOptionModule,
+    MatProgressBarModule
   ]
 })
 export class CustomMaterialModule {}
